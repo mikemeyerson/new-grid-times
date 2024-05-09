@@ -47,6 +47,10 @@ const Abstract = styled.p`
   @media ${QUERIES.tabletOnly} {
     -webkit-line-clamp: 16;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    -webkit-line-clamp: 10;
+  }
 `;
 
 const Location = styled.span`

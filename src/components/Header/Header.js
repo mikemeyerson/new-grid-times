@@ -84,12 +84,14 @@ const DesktopSpacer = styled.div`
 
   @media ${QUERIES.laptopAndUp} {
     display: flex;
-    flex-grow: 1;
+    flex: 1 0 0;
   }
 `;
 
 const DesktopLeftSpacer = styled(DesktopSpacer)``;
 
+// Could have absolutely positioned the SubscribeWrapper so that the link is taken out of flow and
+// the button is vertically centered within the logo.
 const DesktopRightSpacer = styled(DesktopSpacer)`
   align-self: flex-end;
   justify-content: flex-end;
@@ -103,17 +105,31 @@ const SubscribeWrapper = styled.div`
 `;
 
 const LoginLink = styled.a`
+  color: var(--color-gray-900);
   font-size: 0.875rem;
   font-style: italic;
   text-decoration: underline;
 `;
 
+// Could use grid with grid-template-columns: 1fr auto 1fr;
+// to avoid the need for DesktopLeftSpacer and DesktopRightSpacer
+// Use justify-items: start and justify-self: end on Subscribe.
 const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-top: 48px;
+    margin-bottom: 72px;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    margin-top: 16px;
+    margin-bottom: 72px;
+  }
 `;
 
 export default Header;

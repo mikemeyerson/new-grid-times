@@ -23,6 +23,7 @@ const Wrapper = styled.article`
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
 
+  // Solution redefined grid columns / areas
   @media ${QUERIES.tabletOnly} {
     display: flex;
     flex-direction: column;

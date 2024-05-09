@@ -79,18 +79,17 @@ const MainStorySection = styled.section`
   @media ${QUERIES.tabletAndUp} {
     border-right: 1px solid var(--color-gray-300);
     padding-right: 16px;
+    margin-right: 16px;
   }
 `;
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
 
-  @media ${QUERIES.tabletAndUp} {
-    padding: 0 16px;
-  }
-
   @media ${QUERIES.laptopAndUp} {
     border-right: 1px solid var(--color-gray-300);
+    padding-right: 16px;
+    margin-right: 16px;
   }
 `;
 
@@ -101,6 +100,7 @@ const StoryList = styled.div`
   flex-direction: column;
 `;
 
+// Solution uses actual borders on these wrappers instead of background colors and gap
 const StoryWrapper = styled.div`
   background: var(--color-gray-100);
   padding: 16px 0;
@@ -116,10 +116,6 @@ const StoryWrapper = styled.div`
 
 const OpinionSection = styled.section`
   grid-area: opinion-stories;
-
-  @media ${QUERIES.laptopAndUp} {
-    padding-left: 16px;
-  }
 `;
 
 const OpinionStoryList = styled(StoryList)`

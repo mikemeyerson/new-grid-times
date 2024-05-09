@@ -144,6 +144,7 @@ const TopRow = styled.div`
 
   @media ${QUERIES.tabletAndUp} {
     flex-direction: row;
+    gap: 48px;
     justify-content: center;
   }
 
@@ -179,8 +180,7 @@ const MainNavArea = styled.div`
 
   @media ${QUERIES.tabletAndUp} {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     text-align: left;
   }
 
